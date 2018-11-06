@@ -1,0 +1,42 @@
+Lab 19
+1 - SELECT * FROM northwind.customers;
+2 - select distinct country from northwind.customers;
+3 - select * from northwind.customers where CustomerID like "BL%;
+4 - SELECT * FROM northwind.orders limit 100;
+5 - SELECT * FROM northwind.customers where PostalCode IN ('1010','12209', '3012', '12209', '05023');
+6 - SELECT * FROM northwind.orders where ShipRegion IS NOT NULL;
+7 - SELECT * FROM northwind.customers 
+ORDER BY Country, City; 
+8 - INSERT INTO northwind.customers
+ VALUES ('CHAR', 'Grand Circus', 'Grant Chirpus', 'Mascot', '1570 Woodward Ave', 'Detroit', 'MW','48207',3138621233,3133424688,null,null,null); 
+9 - UPDATE northwind.orders
+ SET ShipRegion = 'EuroZone' 
+WHERE ShipCountry = 'France';
+10 - delete FROM northwind.`order details` where quantity = 1;
+11 - SELECT AVG(quantity)
+FROM northwind.`order details`;
+     SELECT MIN(quantity)
+FROM northwind.`order details`;
+     SELECT max(quantity)
+FROM northwind.`order details`;
+12 - SELECT avg(quantity)
+FROM northwind.`order details`
+Group By orderid;
+     SELECT min(quantity)
+FROM northwind.`order details`
+Group By orderid;
+     SELECT max(quantity)
+FROM northwind.`order details`
+Group By orderid;
+13 - SELECT CustomerID FROM northwind.orders where orderID=10290;
+14 - Select *
+ FROM Orders 
+INNER JOIN Customers ON orders.CustomerID = customers.customerID; 
+     Select *
+ FROM Orders 
+LEFT JOIN Customers ON orders.CustomerID = customers.customerID; 
+     Select *
+ FROM Orders 
+Right JOIN Customers ON orders.CustomerID = customers.customerID; 
+15 - SELECT FirstName FROM employees where ReportsTo IS NULL;
+16 - SELECT FirstName FROM employees where ReportsTo =  2;
